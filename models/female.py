@@ -15,7 +15,7 @@ class Female(Human):
 
     def updatePregnancy(self):
         if self.alive:
-            if self.age >= constants.fertility_start_age and self.age < constants.fertility_end_age:
+            if self.fertile and self.age >= constants.fertility_start_age and self.age < constants.fertility_end_age:
                 self.postpartum = self.pregnant
                 self.pregnant = not self.postpartum
 
